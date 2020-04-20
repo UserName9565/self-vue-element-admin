@@ -9,7 +9,7 @@
         {{ $t('excel.export') }} Excel
       </el-button>
       <a href="https://panjiachen.github.io/vue-element-admin-site/feature/component/excel.html" target="_blank" style="margin-left:15px;">
-        <el-tag type="info">Documentation</el-tag>
+        <el-tag>Documentation</el-tag>
       </a>
     </div>
 

@@ -345,3 +345,6 @@ export function removeClass(ele, cls) {
     ele.className = ele.className.replace(reg, ' ')
   }
 }
+export function YYMM(row, column, cellValue) {
+  return util.datetimeFormat(cellValue)
+}

@@ -86,24 +86,48 @@ export const constantRoutes = [
   {
     path: '/basicFunction',
     component: Layout,
-    name: '基础管理',
+    name: 'basicFunction',
     redirect: 'noRedirect',
     meta: {
       title: '基础管理',
-      icon: 'example'
+      icon: 'documentation'
     },
     children: [
       {
         path: 'user',
         component: () => import('@/views/basicFunction/urserManagement'),
-        name: '用户管理',
-        meta: { title: '用户管理', icon: 'documentation', affix: true }
+        name: 'user',
+        meta: { title: '用户管理', icon: 'el-icon-user', affix: false }
       },
       {
         path: 'role',
         component: () => import('@/views/basicFunction/urserManagement'),
         name: 'role',
-        meta: { title: '角色管理', icon: 'documentation', affix: true }
+        meta: { title: '角色管理', icon: 'el-icon-share', affix: false }
+      }
+    ]
+  },
+  {
+    path: '/todoList',
+    component: Layout,
+    name: 'todoList',
+    redirect: 'noRedirect',
+    meta: {
+      title: '待办管理',
+      icon: 'example'
+    },
+    children: [
+      {
+        path: 'authorizerAudit',
+        component: () => import('@/views/todoList/authorizerAudit'),
+        name: 'authorizerAudit',
+        meta: { title: '授权人审核', icon: 'documentation', affix: false }
+      },
+      {
+        path: 'irrigationUkey',
+        component: () => import('@/views/todoList/irrigationUkey'),
+        name: 'irrigationUkey',
+        meta: { title: '灌Ukey', icon: 'documentation', affix: false }
       }
     ]
   },

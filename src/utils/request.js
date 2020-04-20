@@ -3,7 +3,7 @@ import axios from 'axios'
 import { MessageBox, Message } from 'element-ui'
 import store from '@/store'
 import 'url-search-params-polyfill'
-import { getToken } from '@/utils/auth'
+// import { getToken } from '@/utils/auth'
 // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'//'application/x-www-form-urlencoded'
 // create an axios instance
 const service = axios.create({
@@ -29,15 +29,17 @@ service.interceptors.request.use(
     }
     // var data = JSON.stringify(config.data)
     var param = ''
-    var data = JSON.stringify(config.data)
-
-    param = new URLSearchParams()
-    param.append('agileParam', data)
-
+    if (config.method == 'post') {
+      var data = JSON.stringify(config.data)
+      param = new URLSearchParams()
+      param.append('agileParam', data)
+    } else {
+      param = config.data
+    }
     // config.data = {}
     config.data = param
     // config.data = obj_ajax
-    if (store.getters.token && store.getters.token != undefined) {
+    if (store.getters.token && store.getters.token !== undefined) {
       // let each request carry token
       // ['X-Token'] is a custom headers key
       // please modify it according to the actual situation

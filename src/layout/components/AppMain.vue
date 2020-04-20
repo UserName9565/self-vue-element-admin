@@ -1,8 +1,10 @@
 <template>
-  <section class="app-main">
+  <section class="app-main content">
     <transition name="fade-transform" mode="out-in">
       <keep-alive :include="cachedViews">
+        <!-- <vue-scroll> -->
         <router-view :key="key" />
+        <!-- </vue-scroll> -->
       </keep-alive>
     </transition>
   </section>

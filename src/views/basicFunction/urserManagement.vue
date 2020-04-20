@@ -31,7 +31,7 @@
       </el-form>
       <el-table
         :data="agTable"
-        :header-cell-style="{background:'#e0f3ff',color:'#5f95b7'}"
+        :header-cell-style="{background:'#fff',color:'#5f95b7'}"
         border
         stripe
         size="small"
@@ -134,7 +134,7 @@ export default {
         state: status
       }
       let msg = ''
-      if (status == 0) {
+      if (status === 0) {
         msg = '确认要启用选中的数据吗？'
       } else {
         msg = '确认要停用选中的数据吗？'

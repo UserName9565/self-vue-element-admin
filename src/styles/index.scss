@@ -64,7 +64,9 @@ div:focus {
 .fl {
   float: left;
 }
-
+.tac{
+  text-align: center;
+}
 .pr-5 {
   padding-right: 5px;
 }
@@ -84,7 +86,18 @@ div:focus {
 .inlineBlock {
   display: block;
 }
-
+.tar{
+  text-align: right;
+}
+.dpn{
+  display: none;
+}
+.mt-20{
+  margin-top: 20;
+}
+.mr-10{
+  margin:10px
+}
 .clearfix {
   &:after {
     visibility: hidden;
@@ -95,7 +108,13 @@ div:focus {
     height: 0;
   }
 }
-
+.content {
+  width: auto;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
 aside {
   background: #eef1f6;
   padding: 8px 24px;
@@ -188,4 +207,7 @@ aside {
 
 .multiselect--active {
   z-index: 1000 !important;
+}
+.el-form-item, .el-form-item--mini.el-form-item, .el-form-item--small.el-form-item {
+  margin-bottom: 18px;
 }
